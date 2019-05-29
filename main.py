@@ -3,16 +3,11 @@ from tkinter import ttk
 import sqlite3
 import read_text
 
-order = 0
-print(order)
-
 
 # функция для вывода информации после нажатия на кнопку
 def clicked():
     lbl.configure(text='Заказ уже в пути')
     lbl2.configure(text='Заказ уже в пути')
-    order = 1
-    print(order)
 
 
 # функция для обновления состояния окна с товаром на первой вкладке
@@ -26,31 +21,31 @@ def refresh():
     # печать номерка в консоль
     # print(EPC[0])
     if EPC[0] == '3034F7A32414EE8040A00462':
-        im1.configure(file='5.gif')
+        im1.configure(file='images/5.gif')
         l1.configure(image=im1)
 
-        im2.configure(file='6.gif')
+        im2.configure(file='images/6.gif')
         l2.configure(image=im2)
 
-        im3.configure(file='7.gif')
+        im3.configure(file='images/7.gif')
         l3.configure(image=im3)
 
-        im4.configure(file='8.gif')
+        im4.configure(file='images/8.gif')
         l4.configure(image=im4)
 
         # обновление через каждую секунду
         l1.after(1000, refresh)
     else:
-        im1.configure(file='0.gif')
+        im1.configure(file='images/0.gif')
         l1.configure(image=im1)
 
-        im2.configure(file='0.gif')
+        im2.configure(file='images/0.gif')
         l2.configure(image=im2)
 
-        im3.configure(file='0.gif')
+        im3.configure(file='images/0.gif')
         l3.configure(image=im3)
 
-        im4.configure(file='0.gif')
+        im4.configure(file='images/0.gif')
         l4.configure(image=im4)
 
         l1.after(1000, refresh)
@@ -89,19 +84,19 @@ btn4 = Button(tab2, text="Принести", bg='black', fg='white', command=cli
 btn4.grid(column=4, row=4)
 
 # создание лейбла внутри которого помещена картинка
-im1 = PhotoImage(file='0.gif')
+im1 = PhotoImage(file='images/0.gif')
 l1 = Label(tab1, image=im1)
 l1.grid(column=2, row=3)
 
-im2 = PhotoImage(file='0.gif')
+im2 = PhotoImage(file='images/0.gif')
 l2 = Label(tab2, image=im2)
 l2.grid(column=3, row=2)
 
-im3 = PhotoImage(file='0.gif')
+im3 = PhotoImage(file='images/0.gif')
 l3 = Label(tab2, image=im3)
 l3.grid(column=3, row=3)
 
-im4 = PhotoImage(file='0.gif')
+im4 = PhotoImage(file='images/0.gif')
 l4 = Label(tab2, image=im4)
 l4.grid(column=3, row=4)
 
